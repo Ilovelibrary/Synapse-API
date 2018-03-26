@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Index </title>
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+<div class="container">
+	<div class="header">
+		<h1>Index</h1>
+	</div>
+	<div class="row">
+		<div class="card col-xs-12 col-sm-12 col-md-12">
+			<a href="{{url_for('users')}}">
+				<h4 class="card-text">Users</h4>
+			</a>
+		</div>
+		<div class="card col-xs-12 col-sm-12 col-md-12">
+			<a onclick="return spinner();" href="{{url_for('stats')}}">
+				<h4 class="card-text">Statistics</h4>
+			</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

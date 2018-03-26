@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Transactions </title>
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+<div class="container">
+	<div class="header">
+		<h1>Transactions</h1>
+	</div>
+	<div class="row">
+		{% for tran in trans %}
+		<div class="card col-xs-6 col-sm-4 col-md-4">
+			<h4 class="card-text">
+				{{tran['amount']['amount']}} {{tran['amount']['currency']}}
+			</h4>
+			<h6 class="card-text">
+				From: {{tran['from']['user']['legal_names'][0]}} <br> 
+				To: {{tran['to']['user']['legal_names'][0]}} <br>
+				Status: {{tran['recent_status']['status']}}
+			</h6>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+</body>
+</html>

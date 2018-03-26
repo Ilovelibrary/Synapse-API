@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Nodes </title>
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+<div class="container">
+	<div class="header">
+		<h1>Nodes</h1>
+	</div>
+	<div class="row">
+		{% for node in nodes %}
+		<div class="card col-xs-6 col-sm-4 col-md-4">
+			<a href="{{url_for('trans', user_id = user_id, node_id = node['_id'])}}">
+				<h4 class="card-text">
+					{{node['info']['nickname']}}
+				</h4>
+				<h6 class="card-text">
+					Balance: {{node['info']['balance']['amount']}} {{node['info']['balance']['currency']}}
+				</h6>
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+</body>
+</html>

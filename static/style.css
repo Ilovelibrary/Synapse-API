@@ -1,0 +1,25 @@
+.container {
+    padding: 0 50px 50px 50px;
+}
+
+.header {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.card {
+    text-align: center;
+    padding: 2px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #fff;
+    border-width: 3px;
+    background-color: #444;
+}
+.card:hover {
+    background: #222;
+}
+
+.card-text {
+    color: #ccc;
+}
