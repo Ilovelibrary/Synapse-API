@@ -5,10 +5,10 @@ import requests
 import datetime
 
 # API initialization and set header
-client_id = 'client_id_hUgBYN1AlZtwSCrRMHv5fGDyIo2qn80Q96subJKX'   # your client id
-client_secret = 'client_secret_qFwk6KrZW8te5OTI9cyuhHdNiE4U0PlLRsMm2bX7'   # your client secret
-fingerprint = '1af9897d50c6a1d00d224dc953b04469'
-ip_address = '70.95.140.216'   # user's IP
+client_id = ''   # your client id
+client_secret = ''   # your client secret
+fingerprint = ''
+ip_address = ''   # user's IP
 
 headers = {
     'X-SP-GATEWAY': client_id + '|' + client_secret,
